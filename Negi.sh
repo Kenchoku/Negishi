@@ -1,18 +1,14 @@
-##P21~
+##P22~
 
 #!/bin/sh
 
-cat << EOF > heredoc_smp01.c
-
-#include <stdio.h>
-int main(){
-    printf("This is a Sample.¥n");
-    return 0;
-}
+Message()
+{
+cat << EOF
+    This is sample Message
+    for here Documents.
 
 EOF
+}
 
-gcc -o heredoc_smp01 heredoc_smp01.c
-./heredoc_smp01
-
-
+Message
