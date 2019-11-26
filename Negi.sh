@@ -1,8 +1,16 @@
 #!/bin/sh
 
-if  diff $1 $2 > /dev/null 
+diff $1 $2 >/dev/null 2>&1
+EXIT_STATUS=$?
+if [ $EXIT_STATUS -eq 0 ]  
 then
-    echo "<$1><$2>同じ"
+    echo "<$1><$2>  一致"
+
+elif [ $EXIT_STATUS -eq 1 ]
+then
+    echo "<$1><$2>  差異"
+
 else
-    echo "<$1><$2>違う"
+    echo "<$1><$2>  エラー"
+
 fi
