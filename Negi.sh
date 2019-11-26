@@ -1,6 +1,6 @@
 #!/bin/sh
 
-if test $1 -le 0 
+if [ $1 -le 0 ] 
 then
     echo "<$1>0以下"
 else
