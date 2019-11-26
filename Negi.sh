@@ -1,14 +1,8 @@
-##P22~
-
 #!/bin/sh
 
-Message()
-{
-cat << EOF
-    This is sample Message
-    for here Documents.
-
-EOF
-}
-
-Message
+if test $1 -le 0 
+then
+    echo "<$1>0以下"
+else
+    echo "<$1>0以上"
+fi
