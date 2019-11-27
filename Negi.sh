@@ -1,8 +1,10 @@
 #!/bin/sh
 
-for i in $*
+for ((i=0;i<=$1;i++))
 do
-    echo "<$i>**2 = `expr $i \* $i`"
-done 2> /dev/null
-
-echo "<\$i> is $i."
+    echo $i
+    for ((j=10;j<=15;j++))
+    do
+        echo $i $j
+    done
+done
