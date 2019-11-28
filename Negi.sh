@@ -1,9 +1,7 @@
 #!/bin/sh
 
-IFS=""
-LINENUMBER=1
-while read LINE
+while read COL1 COL2
 do
-    echo "$LINENUMBER: $LINE"
-    LINENUMBER=`expr $LINENUMBER + 1`
-done < "$1"
+    echo $COL1
+    echo $COL2
+done < file01 > file02
