@@ -1,10 +1,9 @@
 #!/bin/sh
 
-for ((i=0;i<=$1;i++))
+IFS=""
+LINENUMBER=1
+while read LINE
 do
-    echo $i
-    for ((j=10;j<=15;j++))
-    do
-        echo $i $j
-    done
-done
+    echo "$LINENUMBER: $LINE"
+    LINENUMBER=`expr $LINENUMBER + 1`
+done < "$1"
