@@ -1,9 +1,12 @@
 #!/bin/sh
 
-echo -n "Please enter Yes or No"
+echo "Please enter Yes or No_"
 read RESPONSE
+
 case $RESPONSE in
-    Yes) echo "you answer Yes";;
-    No) echo "you answer No";;
-    *) echo "Not";;
+    [Yy][Ee][Ss]) echo "you answer Yes";;
+    [Yy])         echo "you answer Yes";;    
+    [Nn][Oo])     echo "you answer No";;
+    [Nn])         echo "you answer No";;
+    *) echo "Not Yes or No ";;
 esac
